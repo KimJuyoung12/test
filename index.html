@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>250712_연수test</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고2 데이터 분석 실습 수업 지도안</title>
+    <!-- Google Fonts: Noto Sans KR -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>🚲 고2 데이터 분석 실습 수업 지도안</h1>
+            <p class="subtitle">데이터로 서울시 공공자전거 '따릉이' 완전 정복!</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 1차시 -->
+        <article class="session-card">
+            <div class="card-header">
+                <h2>🚀 1차시: 진짜 문제를 찾아, 데이터와 약속하기</h2>
+                <button class="toggle-btn" aria-expanded="true">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+            <div class="card-content">
+                <div class="session-meta">
+                    <div class="meta-item">
+                        <h3>수업 목표</h3>
+                        <ol>
+                            <li>실생활 문제 해결을 위해 '좋은 질문'을 정의하고, 가설을 세울 수 있다.</li>
+                            <li>공공데이터 포털의 존재를 이해하고, 필요한 데이터를 직접 탐색 및 다운로드할 수 있다.</li>
+                        </ol>
+                    </div>
+                    <div class="meta-item">
+                        <h3>준비물</h3>
+                        <ul>
+                            <li>학생 개인별 컴퓨터 (인터넷 연결)</li>
+                            <li>프로젝트 관리 도구 (패들렛, 구글 문서 등)</li>
+                            <li>서울 열린 데이터 광장 사이트</li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>수업 흐름 (50분)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>단계</th>
+                            <th>활동 내용 (파인만 기법 설명 예시)</th>
+                            <th>시간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>도입</strong></td>
+                            <td><strong>질문으로 시작하기:</strong> "데이터는 '똑똑하게 증거를 대는 기술'이에요. 과학 수사대가 증거물로 범인을 찾듯, 오늘은 우리가 수사대가 되어 서울시 '따릉이'의 미스터리를 풀어볼 거예요."</td>
+                            <td>5분</td>
+                        </tr>
+                        <tr>
+                            <td><strong>전개</strong></td>
+                            <td>
+                                <strong>1. '진짜 문제' 정의하기 (가설 수립):</strong><br>
+                                훌륭한 수사관은 날카로운 가설을 세우죠. "'기온이 20도에 가까울수록 따릉이 이용량이 많을 것이다'처럼 구체적인 가설을 세워야 데이터로 증명할 수 있어요." 모둠별 가설 정의.
+                                <br><br>
+                                <strong>2. 증거물 찾기 (공공데이터 탐색):</strong><br>
+                                '서울 열린 데이터 광장'에 접속해 우리 가설에 필요한 증거(데이터)를 검색하고 탐색합니다.
+                                <br><br>
+                                <strong>3. 데이터 다운로드 및 구조 파악:</strong><br>
+                                CSV 파일을 다운로드하고, 엑셀로 열어 데이터의 속성(컬럼)이 무엇인지 확인합니다.
+                            </td>
+                            <td>40분</td>
+                        </tr>
+                        <tr>
+                            <td><strong>정리</strong></td>
+                            <td><strong>가설 공유 및 다음 시간 예고:</strong> "다음 시간에는 파이썬(Python)이라는 강력한 요리 도구로 이 재료를 다듬고(전처리), 멋지게 플레이팅(시각화)하는 법을 배워보겠습니다."</td>
+                            <td>5분</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <!-- 2차시 -->
+        <article class="session-card">
+            <div class="card-header">
+                <h2>🐍 2차시: 파이썬으로 데이터 요리하기</h2>
+                <button class="toggle-btn" aria-expanded="true">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+            <div class="card-content">
+                <div class="session-meta">
+                    <div class="meta-item">
+                        <h3>수업 목표</h3>
+                        <ol>
+                            <li>파이썬(Pandas)을 이용해 데이터를 불러오고 원하는 형태로 가공(전처리)할 수 있다.</li>
+                            <li>Matplotlib, Seaborn 라이브러리로 데이터를 목적에 맞게 시각화할 수 있다.</li>
+                        </ol>
+                    </div>
+                    <div class="meta-item">
+                        <h3>준비물</h3>
+                        <ul>
+                            <li>학생 개인별 컴퓨터 (인터넷 연결)</li>
+                            <li>구글 코랩(Google Colab) 환경</li>
+                            <li>1차시에 다운로드한 데이터 파일</li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>수업 흐름 (50분)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>단계</th>
+                            <th>활동 내용 (파인만 기법 설명 예시)</th>
+                            <th>시간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>도입</strong></td>
+                            <td><strong>'요리' 비유:</strong> "데이터는 흙 묻은 감자 같아요. 껍질을 까는 게 '전처리', 맛있게 요리하는 게 '시각화'죠. 오늘은 파이썬이라는 최첨단 주방에서 이 모든 걸 해볼 겁니다."</td>
+                            <td>5분</td>
+                        </tr>
+                        <tr>
+                            <td><strong>전개</strong></td>
+                            <td>
+                                <strong>1. 파이썬 주방 입장하기 (Colab & Pandas):</strong><br>
+                                `Pandas`는 만능 칼이자 도마예요. `pd.read_csv()`로 재료를 부르고 `df.head()`로 살짝 맛보는 법을 배웁니다.
+                                <br><br>
+                                <strong>2. 재료 다듬기 (데이터 전처리):</strong><br>
+                                감자의 썩은 부분(결측치)을 도려내고(`dropna`), 데이터의 종류를 알려주고(`to_datetime`), 새로운 소스(파생 변수)를 만듭니다.
+                                <br><br>
+                                <strong>3. 예쁘게 플레이팅하기 (시각화):</strong><br>
+                                `Matplotlib`, `Seaborn`이라는 예쁜 그릇에 시간 흐름은 꺾은선 그래프, 그룹 비교는 막대그래프, 관계 파악은 산점도로 담아냅니다.
+                            </td>
+                            <td>40분</td>
+                        </tr>
+                        <tr>
+                            <td><strong>정리</strong></td>
+                            <td><strong>시각화 결과 공유:</strong> "드디어 우리 눈으로 데이터의 패턴을 볼 수 있게 됐어요! 다음 시간에는 이 그래프라는 결정적 증거로 우리의 가설이 맞았는지 최종 결론을 내리고 발표할 겁니다."</td>
+                            <td>5분</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <!-- 3차시 -->
+        <article class="session-card">
+            <div class="card-header">
+                <h2>🎤 3차시: 데이터로 세상에 이야기 던지기</h2>
+                <button class="toggle-btn" aria-expanded="true">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
+            <div class="card-content">
+                <div class="session-meta">
+                    <div class="meta-item">
+                        <h3>수업 목표</h3>
+                        <ol>
+                            <li>데이터 시각화 자료를 근거로 논리적인 결론을 도출할 수 있다.</li>
+                            <li>분석 결과를 명확하고 설득력 있게 발표할 수 있다.</li>
+                        </ol>
+                    </div>
+                    <div class="meta-item">
+                        <h3>준비물</h3>
+                        <ul>
+                            <li>학생 개인별 컴퓨터</li>
+                            <li>2차시에 만든 분석 자료 (코랩, 그래프)</li>
+                            <li>발표 자료 제작 도구 (PPT, 구글 슬라이드 등)</li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>수업 흐름 (50분)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>단계</th>
+                            <th>활동 내용 (파인만 기법 설명 예시)</th>
+                            <th>시간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>도입</strong></td>
+                            <td><strong>'주장'과 '팩트'의 차이:</strong> "'여름엔 따릉이 많이 타요'는 주장, '그래프를 보니 7, 8월 이용량이 50% 높습니다'는 팩트죠. 오늘은 우리의 주장을 팩트로 만드는 시간입니다."</td>
+                            <td>5분</td>
+                        </tr>
+                        <tr>
+                            <td><strong>전개</strong></td>
+                            <td>
+                                <strong>1. 스토리텔링 구조 잡기:</strong><br>
+                                발표는 영화처럼 '기-승-결-제언' 구조로 만듭니다. (문제 제기 → 분석 과정 → 결론 → 새로운 제언)
+                                <br><br>
+                                <strong>2. 발표 자료 제작 및 리허설:</strong><br>
+                                청중이 봐야 할 부분을 정확히 짚어주며 '이 빨간색 점들을 보시면...' 이라고 친절하게 설명하는 연습을 합니다.
+                                <br><br>
+                                <strong>3. 최종 발표 및 동료 피드백:</strong><br>
+                                3분 내외로 발표하고, '근거는 타당한가?', '결론은 논리적인가?' 기준으로 동료 평가를 진행합니다.
+                            </td>
+                            <td>35분</td>
+                        </tr>
+                        <tr>
+                            <td><strong>정리</strong></td>
+                            <td><strong>프로젝트 회고 및 정리:</strong> "여러분은 코딩 실력뿐 아니라, 문제를 발견하는 눈, 논리적으로 생각하는 힘, 데이터로 설득하는 능력을 얻었습니다. 이것이 진짜 데이터 과학자의 역량입니다."</td>
+                            <td>10분</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 High School Information Class. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

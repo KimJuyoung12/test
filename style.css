@@ -1,0 +1,182 @@
+/* 기본 스타일 초기화 및 폰트 설정 */
+:root {
+    --primary-color: #005A9C; /* 서울색: 서울남산체 */
+    --secondary-color: #4A90E2;
+    --background-color: #f4f7f6;
+    --card-bg-color: #ffffff;
+    --text-color: #333333;
+    --heading-color: #1a1a1a;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.7;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* 컨테이너 및 헤더/푸터 */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* 메인 콘텐츠 및 세션 카드 */
+main {
+    padding: 40px 0;
+}
+
+.session-card {
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.session-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    cursor: pointer;
+    background-color: #fcfcfc;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--heading-color);
+}
+
+.card-content {
+    padding: 30px;
+    /* transition: all 0.4s ease-in-out; */
+}
+
+/* 토글 버튼 */
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.toggle-btn.collapsed .fa-chevron-up {
+    transform: rotate(180deg);
+}
+
+/* 세션 메타 정보 (목표, 준비물) */
+.session-meta {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.meta-item {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.meta-item h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.meta-item ul, .meta-item ol {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: 500;
+    color: var(--heading-color);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+td strong {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .card-header h2 {
+        font-size: 1.2rem;
+    }
+    .session-meta {
+        flex-direction: column;
+    }
+    th, td {
+        padding: 10px;
+    }
+}
